@@ -1,0 +1,250 @@
+/* Set a background color for the entire app */
+body {
+  background-color: #f4f4f9; /* Light gray background */
+  color: #333; /* Dark gray text color */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%; /* Ensure body takes full width */
+}
+
+#root {
+  width: 100%; /* Ensure root takes full width */
+  margin: 0; /* Remove any horizontal margin */
+  padding: 0; /* Remove padding */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style the App container */
+.App {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Allow the App container to grow and fill the space */
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Layout for the filter and doctor list sections */
+.layout {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex: 1; /* Allow the layout to grow and fill the space */
+  width: 100%; /* Ensure the layout takes full width */
+}
+
+/* Filter section styling */
+.filter-section {
+  width: 300px; /* Fixed width for the filter section */
+  background-color: #f9f9f9;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  overflow-y: auto; /* Makes the section scrollable if needed */
+  height: auto; /* Let the height adjust based on content */
+  max-height: none; /* Remove any height constraints */
+}
+
+/* Filter options styling */
+.filter-options {
+  max-height: 150px; /* Limit height to show only a few options */
+  overflow-y: auto; /* Scrollable if more options are present */
+  margin-bottom: 20px;
+}
+
+.filter-options label {
+  display: flex;
+  justify-content: space-between; /* Align text to the left and inputs to the right */
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+/* Doctor list section styling */
+.doctor-list-section {
+  flex: 1; /* Takes the remaining space dynamically */
+  overflow-y: auto; /* Makes the doctor list scrollable if needed */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Style the doctor card */
+.doctor-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  width: 100%; /* Default width */
+  max-width: 600px; /* Maximum width */
+  min-width: 400px; /* Minimum width */
+  flex: 1; /* Allows the card to grow or shrink within the container */
+}
+
+/* Style the doctor photo */
+.doctor-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+/* Doctor name styling */
+.doctor-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Specialty styling */
+.doctor-specialty {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Experience styling */
+.doctor-experience {
+  color: #007bff;
+  margin-bottom: 8px;
+}
+
+/* Fee styling */
+.doctor-fee {
+  font-weight: bold;
+  color: #28a745;
+  margin-bottom: 8px;
+}
+
+.doctor-specialty,
+.doctor-experience,
+.doctor-fee {
+  margin-bottom: 8px;
+}
+
+/* Remove bullet points from the list */
+ul {
+  list-style-type: none; /* Removes bullets */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
+}
+
+/* Style headings */
+h1 {
+  color: #222; /* Slightly darker text for headings */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin: 8px 0;
+}
+
+/* Style paragraphs */
+p {
+  margin: 4px 0;
+  line-height: 1.5;
+}
+
+/* Search Bar Styling */
+.search-bar {
+  position: relative;
+  margin: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Suggestions list styling */
+.suggestions-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 1000;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.suggestion-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+}
+
+.suggestion-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.suggestion-name {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+  text-align: left; /* Left-align the name */
+}
+
+.suggestion-specialty {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+  text-align: left; /* Left-align the specialty */
+}
